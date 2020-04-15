@@ -23,6 +23,7 @@ pipeline {
              timeout(time: 5, unit: "MINUTES"){ //步骤超时时间
                  script{ //填写运行代码
                      print('获取代码')
+                     tools.PrintMes("获取代码",'green')
                 }
          }
       }
@@ -33,6 +34,7 @@ pipeline {
              timeout(time: 20, unit: "MINUTES"){
                  script{
                      print('应用打包')
+                     tools.PrintMes("应用打包",'green')
                 }
          }
       }
@@ -43,7 +45,7 @@ pipeline {
              timeout(time: 30, unit: "MINUTES"){
                  script{
                      print('代码扫描')
-                     tools.PrintMes("This is my lib!")
+                     tools.PrintMes("代码扫描",'green')
                 }
          }
       }
